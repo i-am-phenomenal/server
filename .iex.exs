@@ -1,2 +1,3 @@
 c "lib/server.ex"
-{:ok, _} = Plug.Adapters.Cowboy.http Server, []
+{:ok, processId} = Plug.Adapters.Cowboy.http Server, []
+IO.inspect(procesId)

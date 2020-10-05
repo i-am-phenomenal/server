@@ -405,13 +405,6 @@ RUN mix do deps.get && \
 # This step builds assets for the Phoenix app (if there is one)
 # If you aren't building a Phoenix app, pass `--build-arg SKIP_PHOENIX=true`
 # This is mostly here for demonstration purposes
-RUN if [ ! "$SKIP_PHOENIX" = "true" ]; then\
-  cd ${PHOENIX_SUBDIR}/assets && \
-  yarn install && \
-  yarn deploy && \
-  cd .. && \
-  mix phx.digest; \
-  fi
 
 # CMD trap 'exit' INT; mix ecto.create; mix ecto.migrate; mix phx.server
 # ENTRYPOINT ["sh", "start.sh"]
