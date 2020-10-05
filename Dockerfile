@@ -59,5 +59,5 @@ RUN mix do deps.get && \
 # If you aren't building a Phoenix app, pass `--build-arg SKIP_PHOENIX=true`
 # This is mostly here for demonstration purposes
 
-# CMD trap 'exit' INT; mix ecto.create; mix ecto.migrate; mix phx.server
+CMD trap 'exit' INT; ./start.sh server
 # ENTRYPOINT ["sh", "start.sh"]
